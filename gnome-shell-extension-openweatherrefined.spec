@@ -18,7 +18,7 @@ Requires:       gnome-shell >= 45
 Display weather information for any location on Earth in the GNOME Shell
 
 %prep
-%autosetup
+%autosetup -n gnome-openweather-%{version}
 
 %install
 # install main extension files
