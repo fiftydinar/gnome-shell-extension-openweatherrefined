@@ -48,6 +48,9 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Fri Mar 29 2024 Fifty Dinar <srbaizoki4@tuta.io> - 131-2
+- packaging: Make sure that this version of extension doesn't install on Gnome 46/Fedora 40
+
 * Sun Mar 10 2024 Fifty Dinar <srbaizoki4@tuta.io> - 131-1
 - improvement: Notice on how to search up new locations in "Edit Location" menu
 - improvement: No more space between humidity value and "%"
