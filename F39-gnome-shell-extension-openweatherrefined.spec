@@ -1,8 +1,8 @@
 %global extension   openweatherrefined
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
-%global version 131
-%global commit a83c0d427534b45ab53ca10957f645cbcf4a799d
+%global version     131
+%global commit      a83c0d427534b45ab53ca10957f645cbcf4a799d
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
