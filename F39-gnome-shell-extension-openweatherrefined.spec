@@ -13,7 +13,7 @@ URL:            https://github.com/penguin-teal/gnome-openweather
 Source0:        %{url}/archive/%{commit}/gnome-openweather-%{commit}.tar.gz
 BuildArch:      noarch
 BuildRequires:  gettext
-Requires:       gnome-shell >= 45
+Requires:       gnome-shell == 45
 
 %description
 Display weather information for any location on Earth in the GNOME Shell
