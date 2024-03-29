@@ -6,7 +6,7 @@
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Display weather information for any location on Earth in the GNOME Shell
 License:        GPLv3
 URL:            https://github.com/penguin-teal/gnome-openweather
