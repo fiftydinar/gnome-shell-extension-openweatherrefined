@@ -2,11 +2,11 @@
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
 %global version     132
-%global commit      5c5eac4876312875f729543ae101d4e47154c7db
+%global commit      952dc54ec5151cbd052a823360155877359b18e4
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Display weather information for any location on Earth in the GNOME Shell
 License:        GPLv3
 URL:            https://github.com/penguin-teal/gnome-openweather
@@ -48,6 +48,12 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Wed Apr 03 2024 Fifty Dinar <srbaizoki4@tuta.io> - 132-2
+- note: This is an unofficial release supplied by the packager to include some fixes for Fedora 39 users
+- bugfix: Revert to add_factor for Gnome 45 to fix some regressions
+- bugfix: Crash on first-run Geoclue fail
+- bugfix: -0 temperature display
+
 * Sat Mar 30 2024 Fifty Dinar <srbaizoki4@tuta.io> - 132-1
 - improvement: Gnome 46 support (while maintaining Gnome 45 support)
 - improvement: "Use Extension API Key" now is flipped and reads "Use Custom API Key" for clarity
