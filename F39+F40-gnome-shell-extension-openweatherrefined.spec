@@ -48,7 +48,7 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
-* Fri Apr 05 2024 Fifty Dinar <srbaizoki4@tuta.io> - 133-1
+* Sat Apr 06 2024 Fifty Dinar <srbaizoki4@tuta.io> - 133-1
 - note: Changelog also includes unofficial release v132-2 & v132-3 changelogs
 - improvement: Hide "Gusts" in pop-up if unavailable (instead of showing "?")
 - improvement: Colon after "Gusts" in pop-up 
