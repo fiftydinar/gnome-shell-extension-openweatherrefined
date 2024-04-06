@@ -1,12 +1,12 @@
 %global extension   openweatherrefined
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
-%global version     132
-%global commit      aced34798f938c27b5d972db95e2ead9177cf08d
+%global version     133
+%global commit      59a1490afd8cdfe97ef4e8fd6932cc2d77138456
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
-Release:        3%{?dist}
+Release:        1%{?dist}
 Summary:        Display weather information for any location on Earth in the GNOME Shell
 License:        GPLv3
 URL:            https://github.com/penguin-teal/gnome-openweather
@@ -48,6 +48,11 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Fri Apr 05 2024 Fifty Dinar <srbaizoki4@tuta.io> - 133-1
+- note: Changelog also includes unofficial release v132-2 & v132-3 changelogs
+- improvement: Hide "Gusts" in pop-up if unavailable (instead of showing "?")
+- improvement: Colon after "Gusts" in pop-up 
+
 * Fri Apr 05 2024 Fifty Dinar <srbaizoki4@tuta.io> - 132-3
 - note: This is an unofficial release supplied by the packager to include some fixes to the previous release
 - bugfix: Failure to change pressure unit to kPa
