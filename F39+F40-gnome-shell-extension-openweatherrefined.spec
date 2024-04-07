@@ -2,7 +2,6 @@
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
 %global version     133
-%global commit      59a1490afd8cdfe97ef4e8fd6932cc2d77138456
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
@@ -10,7 +9,7 @@ Release:        1%{?dist}
 Summary:        Display weather information for any location on Earth in the GNOME Shell
 License:        GPLv3
 URL:            https://github.com/penguin-teal/gnome-openweather
-Source0:        %{url}/archive/%{commit}/gnome-openweather-%{commit}.tar.gz
+Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  gettext
 Requires:       gnome-shell >= 45, gnome-shell < 47
@@ -19,7 +18,7 @@ Requires:       gnome-shell >= 45, gnome-shell < 47
 Display weather information for any location on Earth in the GNOME Shell
 
 %prep
-%autosetup -n gnome-openweather-%{commit}
+%autosetup -n gnome-openweather-%{version}
 
 %install
 # install main extension files
