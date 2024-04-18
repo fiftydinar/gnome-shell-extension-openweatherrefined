@@ -1,7 +1,7 @@
 %global extension   openweatherrefined
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
-%global version     133
+%global version     134
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
@@ -47,6 +47,12 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Sat Apr 18 2024 Fifty Dinar <srbaizoki4@tuta.io> - 134-1
+- improvement: Choose between OpenWeatherMap.org or WeatherAPI.com
+- bugfix: Fix location services fail sometimes crashing extension
+- bugfix: Fix geolocation provider selector in preferences not working correctly
+- bugfix: Checkboxes on locations in preferences finally show correctly
+
 * Sat Apr 06 2024 Fifty Dinar <srbaizoki4@tuta.io> - 133-1
 - note: Changelog also includes unofficial release v132-2 & v132-3 changelogs
 - improvement: Hide "Gusts" in pop-up if unavailable (instead of showing "?")
