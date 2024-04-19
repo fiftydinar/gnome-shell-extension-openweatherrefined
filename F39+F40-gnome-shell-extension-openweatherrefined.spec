@@ -12,6 +12,7 @@ URL:            https://github.com/penguin-teal/gnome-openweather
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  gettext
+BuildRequires:  glib2
 Requires:       gnome-shell >= 45, gnome-shell < 47
 
 %description
@@ -40,6 +41,9 @@ for po in *.po; do
 done
 popd
 %find_lang %{gettext}
+
+# Compile gschema
+glib-compile-schemas %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/schemas/
 
 %files -f %{gettext}.lang
 %doc README.md
