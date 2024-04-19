@@ -5,7 +5,7 @@
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Display weather information for any location on Earth in the GNOME Shell
 License:        GPLv3
 URL:            https://github.com/penguin-teal/gnome-openweather
@@ -51,7 +51,10 @@ glib-compile-schemas %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/sche
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
-* Sat Apr 18 2024 Fifty Dinar <srbaizoki4@tuta.io> - 134-1
+* Fri Apr 19 2024 Fifty Dinar <srbaizoki4@tuta.io> - 134-2
+- packaging: Start compiling gschema
+
+* Wed Apr 18 2024 Fifty Dinar <srbaizoki4@tuta.io> - 134-1
 - improvement: Choose between OpenWeatherMap.org or WeatherAPI.com
 - bugfix: Fix location services fail sometimes crashing extension
 - bugfix: Fix geolocation provider selector in preferences not working correctly
