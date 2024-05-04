@@ -41,9 +41,6 @@ done
 popd
 %find_lang %{gettext}
 
-# Compile gschema
-glib-compile-schemas %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/schemas/
-
 %files -f %{gettext}.lang
 %doc README.md
 %{_datadir}/glib-2.0/schemas/*.gschema.xml
