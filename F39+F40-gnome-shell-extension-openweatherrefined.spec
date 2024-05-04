@@ -1,7 +1,7 @@
 %global extension   openweatherrefined
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
-%global version     134
+%global version     135
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
@@ -50,6 +50,23 @@ glib-compile-schemas %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/sche
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Sat May 04 2024 Fifty Dinar <srbaizoki4@tuta.io> - 135-1
+- features: "Adaptive" provider which picks a random provider based on settings so one doesn't get too many requests
+- features: "Paste" settings option in Settings > About beside the "Copy" button
+- improvement: Hide trailing zeroes after temperature
+- improvement: Notify if a provider blocks a request because the call limit was reached
+- improvement: Add locale to Copy Settings JSON
+- improvement: Reload time format when Clock Format (24hr or AM/PM) is changed in GNOME Settings
+- bugfix: Fix condition names not showing with OpenWeatherMap
+- bugfix: Fix last day forecast of WeatherAPI.com showing all the same time
+- bugfix: Fix weather provider attribution button in pop-up not updating when provider changes
+- bugfix: Fix extended forecast starting on wrong day
+- bugfix: Fix today's forecast starting later in the day
+- bugfix: Fix crash when Nominatim fails
+- bugfix: Fix forecast box being too long if forecast days option is higher than the provider gives
+- bugfix: Fix geoclue failing causing errors
+- bugfix: Fix sunset or sunrise in panel sometimes not showing the correct approaching one
+
 * Wed Apr 18 2024 Fifty Dinar <srbaizoki4@tuta.io> - 134-1
 - improvement: Choose between OpenWeatherMap.org or WeatherAPI.com
 - bugfix: Fix location services fail sometimes crashing extension
