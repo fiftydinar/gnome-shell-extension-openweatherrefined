@@ -51,8 +51,8 @@ glib-compile-schemas %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/sche
 
 %changelog
 * Sat May 04 2024 Fifty Dinar <srbaizoki4@tuta.io> - 135-1
-- features: "Adaptive" provider which picks a random provider based on settings so one doesn't get too many requests
-- features: "Paste" settings option in Settings > About beside the "Copy" button
+- feature: "Adaptive" provider which picks a random provider based on settings so one doesn't get too many requests
+- feature: "Paste" settings option in Settings > About beside the "Copy" button
 - improvement: Hide trailing zeroes after temperature
 - improvement: Notify if a provider blocks a request because the call limit was reached
 - improvement: Add locale to Copy Settings JSON
