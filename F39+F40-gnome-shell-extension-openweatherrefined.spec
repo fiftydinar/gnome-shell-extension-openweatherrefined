@@ -1,7 +1,7 @@
 %global extension   openweatherrefined
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
-%global version     135
+%global version     136
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
@@ -47,6 +47,14 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Tue Jun 11 2024 Fifty Dinar <srbaizoki4@tuta.io> - 136-1
+- feature: New "Visual Crossing" weather provider with 14-day-out forecasts
+- improvement: Total Days Forecasted is now a number input box for 0 - 31 (15+ doesn't work with any default keys i.e. you have to have a paid custom key)
+- improvement: Explanations for some more settings
+- improvement: Better Spanish translations (thanks @federicolencina)
+- improvement: Better Czech translations (thanks @lev741)
+- bugfix: Fix bug where notifications spammed when a provider was rate-limiting
+
 * Sat May 04 2024 Fifty Dinar <srbaizoki4@tuta.io> - 135-1
 - feature: "Adaptive" provider which picks a random provider based on settings so one doesn't get too many requests
 - feature: "Paste" settings option in Settings > About beside the "Copy" button
