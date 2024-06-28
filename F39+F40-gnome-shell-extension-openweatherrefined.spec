@@ -1,7 +1,7 @@
 %global extension   openweatherrefined
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
-%global version     136
+%global version     137
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
@@ -47,6 +47,11 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Fri Jun 28 2024 Fifty Dinar <srbaizoki4@tuta.io> - 137-1
+- improvement: "Visual Crossing" removed from "Adaptive" setting's pool; it currently will only work with a personal API key
+- bugfix: Custom API keys not being set correctly
+- bugfix: Fix some API keys not being redacted with Copy Settings button
+
 * Tue Jun 11 2024 Fifty Dinar <srbaizoki4@tuta.io> - 136-1
 - feature: New "Visual Crossing" weather provider with 14-day-out forecasts
 - improvement: Total Days Forecasted is now a number input box for 0 - 31 (15+ doesn't work with any default keys i.e. you have to have a paid custom key)
