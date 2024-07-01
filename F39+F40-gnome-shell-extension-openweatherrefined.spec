@@ -1,7 +1,7 @@
 %global extension   openweatherrefined
 %global uuid        openweather-extension@penguin-teal.github.io
 %global gettext     gnome-shell-extension-%{extension}
-%global version     137
+%global version     138
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
@@ -47,6 +47,14 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Mon Jul 01 2024 Fifty Dinar <srbaizoki4@tuta.io> - 138-1
+- improvement: Better French translations (thanks @Deuchnord)
+- improvement: Better Russian translations (thanks @krotesk)
+- improvement: Better Brazilian Portugese translations (thanks @Vinicius-Madeira)
+- improvement: Better Turkish translations (thanks @furkansimsekli)
+- improvement: Better English grammar
+- bugfix: Fix wrong custom API keys being used (thanks @rakkhin)
+
 * Fri Jun 28 2024 Fifty Dinar <srbaizoki4@tuta.io> - 137-1
 - improvement: "Visual Crossing" removed from "Adaptive" setting's pool; it currently will only work with a personal API key
 - bugfix: Custom API keys not being set correctly
