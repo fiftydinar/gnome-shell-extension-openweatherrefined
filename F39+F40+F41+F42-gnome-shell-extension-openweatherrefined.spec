@@ -26,7 +26,9 @@ mkdir -p %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
 cp -r src/* %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
 cp -r media %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
 # Modify metadata.json to support GNOME 48
-jq --arg gnome_ver "48" 'if (.["shell-version"] | index($gnome_ver) | not) then .["shell-version"] += [$gnome_ver] else . end' metadata.json > %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/metadata.json
+sed -i 's/"47"/"47",\n    "48"/' metadata.json
+cp -r metadata.json %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
+
 # install the schema file
 install -D -p -m 0644 \
     schemas/org.gnome.shell.extensions.%{extension}.gschema.xml \
