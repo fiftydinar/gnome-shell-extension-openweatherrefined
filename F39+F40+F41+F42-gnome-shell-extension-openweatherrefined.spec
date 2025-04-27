@@ -5,14 +5,14 @@
 
 Name:           gnome-shell-extension-%{extension}
 Version:        %{version}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Display weather information for any location on Earth in the GNOME Shell
 License:        GPLv3
 URL:            https://github.com/penguin-teal/gnome-openweather
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  gettext
-Requires:       gnome-shell >= 45, gnome-shell < 48
+Requires:       gnome-shell >= 45, gnome-shell < 49
 
 %description
 Display weather information for any location on Earth in the GNOME Shell
@@ -25,8 +25,8 @@ Display weather information for any location on Earth in the GNOME Shell
 mkdir -p %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
 cp -r src/* %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
 cp -r media %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
-cp -r metadata.json %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/
-
+# Modify metadata.json to support GNOME 48
+jq --arg gnome_ver "48" 'if (.["shell-version"] | index($gnome_ver) | not) then .["shell-version"] += [$gnome_ver] else . end' metadata.json > %{buildroot}%{_datadir}/gnome-shell/extensions/%{uuid}/metadata.json
 # install the schema file
 install -D -p -m 0644 \
     schemas/org.gnome.shell.extensions.%{extension}.gschema.xml \
@@ -47,6 +47,10 @@ popd
 %{_datadir}/gnome-shell/extensions/%{uuid}/
 
 %changelog
+* Mon Sep 23 2024 Fifty Dinar <srbaizoki4@tuta.io> - 139-2
+- note: This is an unofficial release supplied by the packager to include support for GNOME 48
+- improvement: Add GNOME 48 to metadata.json
+
 * Mon Sep 23 2024 Fifty Dinar <srbaizoki4@tuta.io> - 139-1
 - improvement: Add GNOME 47 to metadata.json
 
